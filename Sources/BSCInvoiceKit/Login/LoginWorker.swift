@@ -7,11 +7,6 @@
 
 import Foundation
 import Combine
-//#if os(iOS)
-//import MKit
-//#else
-//import MKit_mac
-//#endif
 
 public enum LoginError: Error {
     case unableToEncodeCredentials

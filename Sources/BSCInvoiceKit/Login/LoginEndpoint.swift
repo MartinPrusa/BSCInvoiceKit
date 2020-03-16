@@ -6,11 +6,6 @@
 //
 
 import Foundation
-//#if os(iOS)
-//import MKit
-//#else
-//import MKit_mac
-//#endif
 
 enum LoginEndpoint: EndpointTarget {
     case login(username: String, base64Credentials: String)
