@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import MKit
 
 enum LoginEndpoint: EndpointTarget {
     case login(username: String, base64Credentials: String)

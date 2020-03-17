@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import MKit
 
 public enum LoginError: Error {
     case unableToEncodeCredentials
