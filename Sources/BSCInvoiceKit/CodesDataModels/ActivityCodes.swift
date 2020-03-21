@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum ActivityCodes: Int {
+public enum ActivityCodes: Int, CaseIterable {
     case analysis = 01
     case programming = 02
     case testing = 03
@@ -18,17 +18,17 @@ public enum ActivityCodes: Int {
     public var description: String {
         switch self {
             case .analysis:
-                return "ANALYSIS: pro ty, kteří se zabývají primárně analýzou"
+                return "ANALYSIS"
             case .programming:
-                return "PROGRAMMING: pro ty, kteří se zabývají primárně vývojem, spadají tam i role jako je např. Tech Lead"
+                return "PROGRAMMING"
             case .testing:
-                return "TESTING: pro ty, kteří se primárně zabývají testováním aplikací"
+                return "TESTING"
             case .projecManagers:
-                return "PROJECT MANA: pro programové a produktové manažery"
+                return "PROJECT MANA"
             case .technicalServices:
-                return "TECHN.SERVIC: pro ty, kteří se zabývají supportem a deploymentem, typicky pro kolegy z CC (IM) a TP"
+                return "TECHN.SERVIC"
             case .consultacy:
-                return "CONSULTANCY: pro ty, kteří se zabývají konzultační činností"
+                return "CONSULTANCY"
         }
     }
 }

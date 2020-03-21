@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum CostCentersCodes: Int {
+public enum CostCentersCodes: Int, CaseIterable {
     case strategicManagementDepartment = 07000071
     case humanResourcesDepartment = 07000072
     case financeAccountingDepartment = 07000073
