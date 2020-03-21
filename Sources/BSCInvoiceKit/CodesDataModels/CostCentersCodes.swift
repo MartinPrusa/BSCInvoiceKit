@@ -8,6 +8,7 @@
 import Foundation
 
 public enum CostCentersCodes: Int, CaseIterable {
+    case urukhaiTeam = 02100226
     case strategicManagementDepartment = 07000071
     case humanResourcesDepartment = 07000072
     case financeAccountingDepartment = 07000073
@@ -25,7 +26,6 @@ public enum CostCentersCodes: Int, CaseIterable {
     case deltaTeam = 02100222
     case successTeam = 02100223
     case topTeam = 02100225
-    case urukhaiTeam = 02100226
     case regionD = 02100227
     case newBusiness = 02100229
     case businessIntelligenceBusinessLine = 022
@@ -33,6 +33,8 @@ public enum CostCentersCodes: Int, CaseIterable {
 
     public var description: String {
         switch self {
+            case .urukhaiTeam:
+                return "Uruk-hai Team"
             case .strategicManagementDepartment:
                 return "Strategic Management Department"
             case .humanResourcesDepartment:
@@ -67,8 +69,6 @@ public enum CostCentersCodes: Int, CaseIterable {
                 return "Success Team"
             case .topTeam:
                 return "Top Team"
-            case .urukhaiTeam:
-                return "Uruk-hai Team"
             case .regionD:
                 return "Region D"
             case .newBusiness:

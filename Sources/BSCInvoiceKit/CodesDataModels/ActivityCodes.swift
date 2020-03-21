@@ -8,8 +8,8 @@
 import Foundation
 
 public enum ActivityCodes: Int, CaseIterable {
-    case analysis = 01
     case programming = 02
+    case analysis = 01
     case testing = 03
     case projecManagers = 05
     case technicalServices = 06
@@ -17,10 +17,10 @@ public enum ActivityCodes: Int, CaseIterable {
 
     public var description: String {
         switch self {
-            case .analysis:
-                return "ANALYSIS"
             case .programming:
                 return "PROGRAMMING"
+            case .analysis:
+                return "ANALYSIS"
             case .testing:
                 return "TESTING"
             case .projecManagers:
