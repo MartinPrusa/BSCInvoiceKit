@@ -7,13 +7,13 @@
 
 import Foundation
 
-public enum ActivityCodes: Int, CaseIterable {
-    case programming = 02
-    case analysis = 01
-    case testing = 03
-    case projecManagers = 05
-    case technicalServices = 06
-    case consultacy = 07
+public enum ActivityCodes: String, CaseIterable {
+    case programming = "02"
+    case analysis = "01"
+    case testing = "03"
+    case projecManagers = "05"
+    case technicalServices = "06"
+    case consultacy = "07"
 
     public var description: String {
         switch self {
