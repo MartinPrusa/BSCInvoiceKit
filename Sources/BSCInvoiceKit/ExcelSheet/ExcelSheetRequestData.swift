@@ -42,7 +42,7 @@ public struct ExcelSheetRequestData {
             "costCenterCode": costCenterCode,
             "creds": creds,
             "filename": filename,
-            "username": username.
+            "username": username,
             "vatRate": vatRate
         ]
     }
