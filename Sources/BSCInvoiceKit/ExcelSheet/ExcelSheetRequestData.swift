@@ -17,8 +17,9 @@ public struct ExcelSheetRequestData {
     private let creds: String
     private let filename: String
     private let username: String
+    private let vatRate: String
 
-    public init(dateFrom: String, dateTo: String, invoiceDate: String, hourRate: String, activityCode: String, costCenterCode: String, creds: String, filename: String, username: String) {
+    public init(dateFrom: String, dateTo: String, invoiceDate: String, hourRate: String, activityCode: String, costCenterCode: String, creds: String, filename: String, username: String, vatRate: String = "21") {
         self.dateFrom = dateFrom
         self.dateTo = dateTo
         self.invoiceDate = invoiceDate
@@ -28,6 +29,7 @@ public struct ExcelSheetRequestData {
         self.creds = creds
         self.filename = filename
         self.username = username
+        self.vatRate = vatRate
     }
 
     func mapToDict() -> [String: String] {
@@ -40,7 +42,8 @@ public struct ExcelSheetRequestData {
             "costCenterCode": costCenterCode,
             "creds": creds,
             "filename": filename,
-            "username": username
+            "username": username.
+            "vatRate": vatRate
         ]
     }
 }
