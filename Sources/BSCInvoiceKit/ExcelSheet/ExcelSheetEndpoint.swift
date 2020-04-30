@@ -24,9 +24,9 @@ enum ExcelSheetEndpoint: EndpointTarget {
             case .debug:
                 return "http://localhost:3000"
             case .staging:
-                return "https://bsc-invoice-npm.herokuapp.com"
+                return "https://invoice.martinprusa.com"
             case .production:
-                return "https://bsc-invoice-npm.herokuapp.com"
+                return "https://invoice.martinprusa.com"
         }
     }
 

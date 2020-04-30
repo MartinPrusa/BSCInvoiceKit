@@ -27,7 +27,6 @@ public final class LoginWorker {
 
     public func login(with username: String, password: String, completion: @escaping (Result<UrlResponseResource.ResultConstruct, UrlResponseResource.ErrorResponse>) -> Void) {
         guard let base64Credentials = "\(username):\(password)".data(using: .utf8)?.base64EncodedString() else {
-
             let response = UrlResponseResource.ErrorResponse(response: nil, err: LoginError.unableToEncodeCredentials, data: nil)
             completion(.failure(response))
             return
@@ -36,6 +35,7 @@ public final class LoginWorker {
         let requestConfig = LoginEndpoint.login(username: username, base64Credentials: base64Credentials).requestFactoryConfigurator()
         let request = URLRequestFactory.init(config: requestConfig).request
         let resource = UrlResponseResource(request: request, result: nil)
+        URLSessionFactory.shared.sslCertificate = nil
 
         _ = URLSessionFactory.shared.plainLoad(resource: resource) { result in
             completion(result)
@@ -52,6 +52,7 @@ public final class LoginWorker {
         let requestConfig = LoginEndpoint.login(username: username, base64Credentials: base64Credentials).requestFactoryConfigurator()
         let request = URLRequestFactory.init(config: requestConfig).request
         let resource = UrlResponseResource(request: request, result: nil)
+        URLSessionFactory.shared.sslCertificate = nil
 
         return URLSessionFactory.shared.plainLoadDecodedPublisher(resource: resource, decodable: LoggedUser.self)
     }
